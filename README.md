@@ -63,8 +63,8 @@ Combine tiles with the same number to reach the **2048 tile**.
 ### 1️⃣ Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/2048-game.git
-cd 2048-game
+git clone https://github.com/SahO-ux/game-2048.git
+cd game-2048
 ```
 
 ### 2️⃣ Install dependencies:
