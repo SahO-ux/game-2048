@@ -85,10 +85,11 @@ npm run dev
 
 ## 🐳 Run with Docker (Optional)
 
-### 1️⃣ Open Docker Desktop
+- Note Docker Desktop must be installed and Docker engine should be active
 
-### 2️⃣ Build and start container:
-
+### Build and start container:
+- Inside root directory (game-2048) run the following command:
+  
 ```bash
 docker compose up --build
 ```
