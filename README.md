@@ -1,16 +1,177 @@
-# React + Vite
+# 🧩 2048 Game
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern and responsive implementation of the popular **2048 puzzle game** built using **React.js** and **Tailwind CSS**.  
+The goal of the game is to combine numbered tiles to reach the **2048 tile**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## React Compiler
+- 🎮 Playable with keyboard or on-screen controls
+- 📱 Supports swipe gestures on touch devices
+- ⚙️ Configurable board size (3x3, 4x4, 5x5)
+- 💾 Score tracking
+- 🏆 Game ends automatically when:
+  -> Tile value 2048 is reached (You win 🎉)
+  -> No more valid moves are possible
+- 🔁 Restart and Play Again functionality
+- 🧱 Built with modular, easy-to-extend codebase
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🧠 Gameplay Instructions
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 🎯 Objective
+Combine tiles with the same number to reach the **2048 tile**.
+
+---
+
+### 🎮 Controls
+
+- **Arrow Keys (↑ ↓ ← →)** to move tiles.  
+- **On-screen buttons** for desktop users.  
+- **Swipe** in any direction on mobile/touch screens.  
+
+---
+
+### ⚙️ How It Works
+
+- When **two tiles with the same number** touch, they **merge into one**.  
+- Each move **spawns a new tile** (either `2` or `4`).  
+
+---
+
+### 🔚 Game Ends When
+
+- You reach **2048** → 🎉 **You Win!**  
+- No moves are possible → 💀 **Game Over!**
+
+---
+
+## ⚡ Installation & Setup
+
+### Prerequisites
+
+- Node.js ≥ 18
+- npm ≥ 9
+- (Optional) Docker ≥ 24 if running via container
+
+---
+
+## 🧩 Local Setup
+
+### 1️⃣ Clone the repository:
+
+```bash
+git clone https://github.com/your-username/2048-game.git
+cd 2048-game
+```
+
+### 2️⃣ Install dependencies:
+
+```bash
+npm install
+```
+
+### 3️⃣ Run locally:
+
+```bash
+npm run dev
+```
+
+- The app runs on http://localhost:5173
+
+---
+
+## 🐳 Run with Docker (Optional)
+
+### 1️⃣ Open Docker Desktop
+
+### 2️⃣ Build and start container:
+
+```bash
+docker compose up --build
+```
+
+- The app will be served at http://localhost:3000
+
+---
+
+## 🧩 Implementation Details
+
+### 🧱 Tech Stack
+
+- Frontend: React (Vite)
+- Styling: TailwindCSS
+- Deployment: Docker + Node Alpine
+- Serving: serve (static file server)
+
+---
+
+## 🔍 Code Structure
+
+```
+game-2048/
+│
+├── src/
+├── public/
+├── index.html
+├── package.json
+├── package-lock.json
+├── vite.config.js
+├── eslint.config.js
+├── tailwind.config.js
+├── postcss.config.js
+├── Dockerfile
+├── .dockerignore
+├── .gitignore
+├── docker-compose.yml
+└── README.md
+```
+
+---
+
+## 🔄 Game Logic Overview
+
+- Board State: Represented as a 2D array (board[row][col])
+
+### Movement:
+
+Implemented via a single **moveBoard(board, direction)** function that:
+- Rotates the board depending on direction.
+- Reuses **moveRowLeft()** logic for all directions.
+- Merges and updates tiles accordingly.
+
+### Game End Check:
+
+**isGameOver(board)** checks for:
+- Existence of 2048 tile → win
+- No valid moves → lose
+
+### Random Tile Generation:
+
+- **getRandomTile()** spawns a new tile (2 or 4) in an empty cell after every move.
+
+---
+
+## 🧰 Design Choices
+
+### Functional & Modular:
+- All game logic isolated inside utility functions for easy testing and extension.
+
+### No external state library:
+- Managed with React’s built-in useState and useCallback.
+
+### Performance:
+- Used useMemo for derived values (like gameOver) and useCallback for stable handlers.
+
+### UI/UX:
+- Simple, minimal, and mobile-friendly using TailwindCSS.
+
+---
+
+## 👨‍💻 Author
+
+- Developed by: Sahil Akbari
+- Created as part of a Full Stack Developer assessment task.
+---
