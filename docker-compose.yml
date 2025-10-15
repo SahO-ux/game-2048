@@ -1,0 +1,10 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: 2048-react:latest
+    container_name: 2048-react
+    ports:
+      - "3000:3000"
+    restart: unless-stopped
