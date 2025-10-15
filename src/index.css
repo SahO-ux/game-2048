@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Board background & layout */
+.board {
+  /* display: inline-block; */
+  background: #bbada0;
+  padding: 12px;
+  border-radius: 10px;
+}
+
+/* Tile base */
+.tile {
+  background: #eee4da;
+  color: #776e65;
+  transition: transform 120ms ease, background 120ms ease;
+}
+
+/* Tile color classes (fallback if not using extended tailwind colors) */
+.tile-1 {
+  background: #eee4da;
+} /* 2 */
+.tile-2 {
+  background: #ede0c8;
+} /* 4 */
+.tile-3 {
+  background: #f2b179;
+  color: white;
+} /* 8 */
+.tile-4 {
+  background: #f59563;
+  color: white;
+} /* 16 */
+.tile-5 {
+  background: #f67c5f;
+  color: white;
+} /* 32 */
+.tile-6 {
+  background: #f65e3b;
+  color: white;
+} /* 64 */
+.tile-7 {
+  background: #edcf72;
+  color: white;
+} /* 128 */
+.tile-8 {
+  background: #edcc61;
+  color: white;
+} /* 256 */
+.tile-9 {
+  background: #edc850;
+  color: white;
+} /* 512 */
+.tile-10 {
+  background: #edc53f;
+  color: white;
+} /* 1024 */
+.tile-11 {
+  background: #edc22e;
+  color: white;
+} /* 2048 */
+.tile-12 {
+  background: #3c3a32;
+  color: white;
+} /* >2048 */
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
