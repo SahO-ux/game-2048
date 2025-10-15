@@ -28,8 +28,8 @@ Combine tiles with the same number to reach the **2048 tile**.
 
 ### 🎮 Controls
 
-- **Arrow Keys (↑ ↓ ← →)** to move tiles.  
-- **On-screen buttons** for desktop users.  
+- Keyboard's **Arrow Keys (↑ ↓ ← →)** to move tiles.  
+- Additional **On-screen buttons**.  
 - **Swipe** in any direction on mobile/touch screens.  
 
 ---
