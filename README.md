@@ -3,6 +3,8 @@
 A modern and responsive implementation of the popular **2048 puzzle game** built using **React.js** and **Tailwind CSS**.  
 The goal of the game is to combine numbered tiles to reach the **2048 tile**.
 
+- Deployment Link:- https://game-2048-ashy.vercel.app/
+
 ---
 
 ## 🚀 Features
