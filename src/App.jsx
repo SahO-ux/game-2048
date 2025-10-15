@@ -11,7 +11,7 @@ const App = () => {
 
   // Derived check for both "2048 reached" or "no more moves"
   const isGameOver = useCallback((b) => {
-    const has2048 = b.some((row) => row.includes(16));
+    const has2048 = b.some((row) => row.includes(2048));
     const noMovesLeft = !["up", "down", "left", "right"].some(
       (dir) => moveBoard(b, dir).moved
     );
@@ -101,7 +101,7 @@ const App = () => {
       {gameOver && (
         <div className="mt-4 text-center">
           <p className="text-red-400 font-bold mb-2">
-            {board.some((row) => row.includes(16))
+            {board.some((row) => row.includes(2048))
               ? "🎉 You Win!"
               : "Game Over!"}
           </p>
