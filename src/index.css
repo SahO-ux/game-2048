@@ -8,6 +8,7 @@
   background: #bbada0;
   padding: 12px;
   border-radius: 10px;
+  touch-action: none;
 }
 
 /* Tile base */
